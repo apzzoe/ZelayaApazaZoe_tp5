@@ -146,5 +146,5 @@ int main(){
 	cout << "Frente de la cola: " << consultarFrente(cola)<<endl;
 	cout << "Elemento extraído de la cola: " << quitarCola(cola)<<endl;
 	cout << "Nuevo frente de la cola: " << consultarFrente(cola)<<endl;
-	cout << "Cantidad actual en la cola: " << obtenerCantidad(cola)<<endl
+	cout << "Cantidad actual en la cola: " << obtenerCantidad(cola)<<endl;
 }
