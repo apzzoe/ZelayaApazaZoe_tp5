@@ -165,3 +165,4 @@ int main(){
 	combinar_listas_ordenadas(lista1, lista2, lista_combinada);
 	cout<<"\nListas combinadas (ordenadas):\n";
 	mostrar(lista_combinada);
+}
