@@ -15,3 +15,5 @@ En la tercera funcion "desconocido" lo que hace es buscar el último nodo de la 
 Va avanzando uno por uno hasta encontrar al que tiene como siguiente un puntero nulo,
 que significa que es el último, y ese es el que devuelve.
 Entonces básicamente sirve para obtener un puntero que apunta directamente al último nodo.
+
+//Perdon profe no sabia como mandarle este punto :(
