@@ -89,15 +89,15 @@ pnodo extraer_minimo(pnodo &lista){
 			agregar_final(lista, nuevo);
 		}
 		
-		cout << "Lista actual:";
+		cout << "\nLista actual:\n";
 		mostrar(lista);
 		
 		pnodo min = extraer_minimo(lista);
 		if(min != NULL){
-			cout<<"Mínimo extraído: "<<min->dato<<endl;
+			cout<<"\nMínimo extraído: "<<min->dato<<endl;
 			delete min;
 		}
 		
-		cout<<"Lista luego de extraer mínimo:";
+		cout<<"\nLista luego de extraer mínimo:\n";
 		mostrar(lista);
 	}
