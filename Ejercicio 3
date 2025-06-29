@@ -106,3 +106,56 @@ pnodo buscar_por_indice(tlista lista, int indice){
 	}
 	return i;
 }
+
+int main(){
+	tlista lista;
+	iniciar_lista(lista);
+	pnodo nuevo;
+	int cantidad;
+	
+	cout<<"¿Cuántos nodos desea crear? ";
+	cin>>cantidad;
+	
+	for(int i = 0; i < cantidad; i++){
+		crear_nodo(nuevo);
+		agregar_final(lista, nuevo);
+	}
+	
+	cout<<"\nLista actual:\n";
+	mostrar(lista);
+	cout<<"\nCantidad de elementos: " << obtener_cantidad(lista)<<endl;
+	
+	pnodo borrado = eliminar_final(lista);
+	if(borrado != NULL){
+		cout<<"\nNodo eliminado: " << borrado->dato<<endl;
+		delete borrado;
+	}
+	
+	cout<<"\nLista luego de eliminar último nodo:\n";
+	mostrar(lista);
+	cout<<"\nCantidad de elementos: " << obtener_cantidad(lista)<<endl;
+
+	int valor_buscar;
+	cout<<"\nIngrese un valor a buscar en la lista: ";
+	cin>>valor_buscar;
+	
+	int indice = buscar_indice(lista, valor_buscar);
+	if(indice != -1){
+		cout<<"El valor "<<valor_buscar<<" se encuentra en la posición lógica: "<<indice<<endl;
+	}
+	else{
+		cout<<"El valor no se encuentra en la lista.\n";
+	}
+	
+	int posicion;
+	cout<<"\nIngrese una posición para buscar el nodo: ";
+	cin>>posicion;
+	
+	pnodo encontrado = buscar_por_indice(lista, posicion);
+	if(encontrado != NULL){
+		cout<<"En la posición "<<posicion<<" se encuentra el valor: "<<encontrado->dato<<endl;
+	}
+	else{
+		cout<<"No hay ningún nodo en esa posición.\n";
+	}
+}
